@@ -29,7 +29,7 @@ function run (){
     }
 }
 const dot=document.querySelectorAll(".dotted");
-dot[3].style.top="320px";
+dot[3].style.top="333px";
 console.log(dot)
 let k=0;
 console.log(dot);
@@ -37,6 +37,7 @@ dot.forEach(item=>{
   item.addEventListener("mouseover",()=>{
    const cont= item.querySelector(".Content");
    cont.style.backgroundColor="#011f4b"
+   cont.style.color="white";
   }
   )
 })
@@ -45,7 +46,8 @@ dot.forEach(item=>{
 
   item.addEventListener("mouseout",()=>{
     const cont= item.querySelector(".Content");
-    cont.style.backgroundColor="transparent" 
+    cont.style.backgroundColor="transparent" ;
+    cont.style.color="transparent";
   }
   )
 })
