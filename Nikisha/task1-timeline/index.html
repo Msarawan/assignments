@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Vertical Timeline </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<header>
+    
+</header>
+    
+<img src="images/icon1.jpg" alt="img"/>
+  
+  <section class="timeline">
+    <ul>
+      <li>
+    
+        <div>
+            <h4>Senior manager</h4> 
+            <p style="background-color: rgb(199, 194, 194);"><i class="fa fa-briefcase" aria-hidden="true"></i>    Company X<br><i class="fa fa-calendar" aria-hidden="true"></i>     5/2022 - present(0 Years 0 Months)<br><i class="fa fa-map-marker" aria-hidden="true"></i>     Chicago</p>
+            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+        </div>
+
+      <li>
+        <div>
+            <h4>Manager</h4>
+            <p style="background-color: rgb(199, 194, 194);"><i class="fa fa-briefcase" aria-hidden="true"></i>    Company Y<br><i class="fa fa-calendar" aria-hidden="true"></i>     9/2020 - 5/2022(1 Years 7 Months)<br><i class="fa fa-map-marker" aria-hidden="true"></i>      Barcelona</p>
+            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+            <h4>Staff Manager</h4>
+            <p style="background-color: rgb(199, 194, 194);"><i class="fa fa-briefcase" aria-hidden="true"></i>    Publicis<br><i class="fa fa-calendar" aria-hidden="true"></i>    9/2017 - 9/2020(3 Years 0 Months)<br><i class="fa fa-map-marker" aria-hidden="true"></i>      Madrid</p>
+            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+            <h4>Associate manager</h4>
+            <p style="background-color: rgb(199, 194, 194);"><i class="fa fa-briefcase" aria-hidden="true"></i>    Fidelity<br><i class="fa fa-calendar" aria-hidden="true"></i>     4/2012 - 9/2017(5 Years 5 Months)<br><i class="fa fa-map-marker" aria-hidden="true"></i>     Gurgaon</p>
+            <p >Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+            <h4>Application Lead</h4>
+            <p style="background-color: rgb(199, 194, 194);"><i class="fa fa-briefcase" aria-hidden="true"></i>     Company z<br><i class="fa fa-calendar" aria-hidden="true"></i>     12/2011 - 3/2012(0 Years 3 Months)<br><i class="fa fa-map-marker" aria-hidden="true"></i>      Gurgaon</p>
+            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+            <h4>Software developer</h4>
+            <p style="background-color: rgb(199, 194, 194);"><i class="fa fa-briefcase" aria-hidden="true"></i>    Company XYZ<br><i class="fa fa-calendar" aria-hidden="true"></i>      2/2008 - 12/2011(3 Years 10 Months)<br><i class="fa fa-map-marker" aria-hidden="true"></i>     Bangalore</p>
+            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>.
+        </div>
+      </li>
+      <li>
+        <div>
+            <h4>Born into this world</h4>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <script>
+      (function () {
+  "use strict";
+
+  // define variables
+  var items = document.querySelectorAll(".timeline li");
+
+  function isElementInViewport(el) {
+    var rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <=
+        (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  function callbackFunc() {
+    for (var i = 0; i < items.length; i++) {
+      if (isElementInViewport(items[i])) {
+        items[i].classList.add("in-view");
+      }
+    }
+  }
+
+  // listen for events
+  window.addEventListener("load", callbackFunc);
+  window.addEventListener("resize", callbackFunc);
+  window.addEventListener("scroll", callbackFunc);
+})();
+
+  </script>
+  
+  <footer>
+    <h4>@footer</h4>
+</footer>
+
+</body>
+</html>
